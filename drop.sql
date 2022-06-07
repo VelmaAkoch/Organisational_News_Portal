@@ -1,0 +1,1 @@
+DROP DATABASE Organisational_News_PortalAPI;
