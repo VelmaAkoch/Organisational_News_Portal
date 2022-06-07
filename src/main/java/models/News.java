@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Objects;
+
 public class News {
     private int id;
     private String title;
@@ -48,5 +50,18 @@ public class News {
 
     public void setDepartment_id(int department_id) {
         this.department_id = department_id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, content, department_id);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        News news = (News) o;
+        return id== news.id && department_id == news.department_id && title.equals(news.title) && content.equals(news.content);
     }
 }
