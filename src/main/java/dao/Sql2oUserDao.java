@@ -45,9 +45,14 @@ public class Sql2oUserDao implements  UserDao{
         }
 
     }
-//
-//    @Override
-//    public List<User> getAllUsersByDepartment(int user_id) {
-//        return null;
-//    }
+
+    @Override
+    public List<User> getAllUsersByDepartment(int department_id) {
+        String sql = "SELECT * FROM users WHERE department_id = :department_id";
+        try (Connection connection = sql2o.open()){
+            return connection.createQuery(sql)
+                    .addParameter("department_id",department_id)
+                    .executeAndFetch(User.class);
+        }
+    }
 }
