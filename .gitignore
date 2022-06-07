@@ -44,8 +44,12 @@ gradle
 gradlew.bat
 gradlew
 settings.gradle
+build.gradle
+bin/
 
 # IntelliJ #
 ############
 .idea
 .idea/
+target/
+/target/

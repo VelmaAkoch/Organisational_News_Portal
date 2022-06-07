@@ -12,6 +12,10 @@ public class ResponseArray {
         this.data = data;
     }
 
+    public ResponseArray(int i, String success) {
+
+    }
+
     public int getStatus() {
         return status;
     }

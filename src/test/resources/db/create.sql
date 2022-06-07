@@ -23,4 +23,4 @@
  department_id int
  );
 
- CREATE DATABASE organisational_news_test WITH TEMPLATE organisational_news;
+ CREATE DATABASE Organisational_News_PortalAPI_test WITH TEMPLATE Organisational_News_PortalAPI;
